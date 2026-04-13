@@ -1,0 +1,5 @@
+name: astrbot_plugin_blog_checker
+display_name: 博客检查器
+author: huyangpahuo
+version: 1.0.0
+desc: 检查 Hexo 博客最新文章并返回链接

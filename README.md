@@ -1,0 +1,2 @@
+# astrbot_plugin_blog_checker
+astrbot的插件,用来检测blog文章更新情况

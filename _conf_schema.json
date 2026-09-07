@@ -1,0 +1,93 @@
+{
+  "enable_push": {
+    "description": "启用后台定时轮询与推送",
+    "type": "bool",
+    "default": true,
+    "hint": "关闭后仍可手动使用 blog check / blog fetch"
+  },
+  "check_interval": {
+    "description": "轮询间隔（分钟）",
+    "type": "int",
+    "default": 30,
+    "hint": "最小 1 分钟，建议 15-60 分钟，避免请求过于频繁"
+  },
+  "default_blog": {
+    "description": "默认博客名",
+    "type": "string",
+    "default": "",
+    "hint": "blog check 不带参数时使用的博客；留空则用第一个"
+  },
+  "blogs": {
+    "description": "博客列表（配置预置）",
+    "type": "list",
+    "default": [
+      {
+        "name": "我的博客",
+        "url": "https://funingna-wakawaka.github.io/",
+        "rss_url": "",
+        "parser": "auto",
+        "enabled": true
+      }
+    ],
+    "items": {
+      "name": {
+        "description": "博客名（唯一标识）",
+        "type": "string",
+        "default": ""
+      },
+      "url": {
+        "description": "博客主页地址",
+        "type": "string",
+        "default": ""
+      },
+      "rss_url": {
+        "description": "RSS 地址（可留空自动探测）",
+        "type": "string",
+        "default": ""
+      },
+      "parser": {
+        "description": "解析器",
+        "type": "string",
+        "options": ["auto", "rss", "html"],
+        "default": "auto"
+      },
+      "enabled": {
+        "description": "是否启用",
+        "type": "bool",
+        "default": true
+      }
+    },
+    "hint": "预置的博客在 WebUI 中编辑；动态添加请用 blog add 命令"
+  },
+  "max_articles": {
+    "description": "文章列表最多显示条数",
+    "type": "int",
+    "default": 5
+  },
+  "max_articles_per_push": {
+    "description": "单次推送最多条数",
+    "type": "int",
+    "default": 3,
+    "hint": "一轮轮询发现多篇新文章时，单博客最多推送几篇，防止刷屏"
+  },
+  "show_cover": {
+    "description": "消息中携带封面图",
+    "type": "bool",
+    "default": true
+  },
+  "show_summary": {
+    "description": "消息中显示摘要",
+    "type": "bool",
+    "default": true
+  },
+  "request_timeout": {
+    "description": "HTTP 超时（秒）",
+    "type": "int",
+    "default": 15
+  },
+  "request_retries": {
+    "description": "请求失败重试次数",
+    "type": "int",
+    "default": 2
+  }
+}

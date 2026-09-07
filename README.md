@@ -1,6 +1,6 @@
-# astrbot_plugin_blog_checker
+# astrbot_plugin_blog_checker(用来学习astrbot)
 
-AstrBot 博客检查器（高级版）：多博客订阅、RSS/Atom 自动探测、HTML 兜底解析、定时轮询、新文章自动推送到订阅的会话。
+AstrBot 博客检查器：多博客订阅、RSS/Atom 自动探测、HTML 兜底解析、定时轮询、新文章自动推送到订阅的会话。
 
 ## ✨ 功能
 
